@@ -1,0 +1,28 @@
+# Byte-code files
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Test and coverage files
+.pytest_cache/
+.coverage
+
+# Jupyter Notebook files
+.ipynb_checkpoints/
+
+# Other common ignored files
+*.log
+*.sqlite3
