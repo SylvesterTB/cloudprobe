@@ -5,8 +5,11 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY src/ ./src
+
+
+COPY . /app
+
 COPY config ./config
 RUN mkdir -p /app/logs
 
-CMD ["python", "/app/src/test_runner.py"]
+CMD ["python", "-m", "cloudprobe.cli", "--config", "config/sample-test.json"]

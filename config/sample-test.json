@@ -1,5 +1,12 @@
 [
-    { "name": "DuckDuckGo Home", "url": "https://duckduckgo.com", "expect_status": 200 },
-    { "name": "Github Redirect Check", "url": "http://github.com", "expect_status": 301 },
-    { "name": "Content Check", "url": "https://example.com", "expect_contains": "200" }
+    {
+        "name": "Google Homepage",
+        "action": "http",
+        "params": { "url": "https://google.com", "timeout": 5 }
+    },
+    {
+        "name": "Local Webserver Port",
+        "action": "tcp",
+        "params": { "host": "localhost", "port": 8080 }
+    }
 ]
