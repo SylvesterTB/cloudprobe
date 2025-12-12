@@ -28,8 +28,8 @@ def main():
         for r in results:
             print(f"{'PASS' if r['passed'] else 'FAIL'} - {r['name']}")
         return
-    
-    if all(r["passed"] for r in results):
+
+    if all(r['passed'] for r in results):
         sys.exit(0) 
     else:
         sys.exit(1)  

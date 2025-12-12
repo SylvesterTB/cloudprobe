@@ -5,11 +5,13 @@ from .models import TestCase
 from .actions.http_check import run_http_check
 from .actions.ping_check import run_ping_check
 from .actions.tcp_check import run_tcp_check
+from .actions.dns_check import run_dns_check
 
 ACTION_MAP = {
     "http": run_http_check,
     "ping": run_ping_check,
     "tcp": run_tcp_check,
+    "dns": run_dns_check
 }
 
 def load_test_cases(config_path):
@@ -32,7 +34,7 @@ def run_tests(config_path):
             continue
 
         outcome = handler(test.params)
-        outcome["name"] = test.name
+        outcome = {"name": test.name, **outcome}
         results.append(outcome)
 
     return results
