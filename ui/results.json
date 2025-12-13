@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Google Homepage",
+        "passed": true,
+        "duration_ms": 340,
+        "error": null,
+        "details": {
+            "host": "google.com",
+            "port": 443,
+            "status_code": 200,
+            "latency": 340,
+            "contains": true
+        }
+    },
+    {
+        "name": "Local Webserver Port",
+        "passed": false,
+        "duration_ms": "N/A",
+        "error": "[Errno 111] Connection refused",
+        "details": {
+            "host": "localhost",
+            "port": 8080
+        }
+    },
+    {
+        "name": "Google Homepage",
+        "passed": true,
+        "duration_ms": 2,
+        "error": null,
+        "details": {
+            "hostname": "google.com",
+            "ip_address": "172.217.215.138"
+        }
+    }
+]
