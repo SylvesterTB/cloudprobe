@@ -1,6 +1,7 @@
 import argparse
 from .runner import run_tests
 from .utils import setup_logging
+from .utils import write_results
 import json
 import sys
 
@@ -17,6 +18,8 @@ def main():
     args = parser.parse_args()
     setup_logging()
     results = run_tests(args.config)
+    write_results(results)
+
     for r in results:
         print(r)
     

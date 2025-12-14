@@ -14,3 +14,7 @@ def setup_logging():
         datefmt='%Y-%m-%d %H:%M:%S',
         level=logging.DEBUG
     )
+    
+def write_results(results, path="output/results.json"):
+    with open(path, "w") as f:
+        json.dump(results, f, indent=2)

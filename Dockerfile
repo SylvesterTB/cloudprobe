@@ -10,6 +10,11 @@ RUN pip install -r requirements.txt
 COPY . /app
 
 COPY config ./config
-RUN mkdir -p /app/logs
+RUN apt-get update && apt-get install -y awscli
+RUN mkdir -p /app/output
 
-CMD ["python", "-m", "cloudprobe.cli", "--config", "config/sample-test.json"]
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+
