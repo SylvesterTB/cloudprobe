@@ -17,5 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag cloudprobe:latest
     - name: run Cloudprobe
-      run: docker run \ cloudprobe:latest 
+      run: docker run \
+        cloudprobe:latest
 
