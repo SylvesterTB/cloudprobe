@@ -12,6 +12,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag cloudprobe:latest
+
     - name: Run CloudProbe
       run: |
         docker run \
@@ -19,9 +23,3 @@ jobs:
           -e AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} \
           -e AWS_DEFAULT_REGION=${{ secrets.AWS_DEFAULT_REGION }} \
           cloudprobe:latest
-
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag cloudprobe:latest
-
-    - name: Run CloudProbe
-      run: docker run cloudprobe:latest
