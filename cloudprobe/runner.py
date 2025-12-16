@@ -1,6 +1,5 @@
 import json
 import requests
-from .utils import save_results_to_log
 from .models import TestCase
 from .actions.http_check import run_http_check
 from .actions.ping_check import run_ping_check
