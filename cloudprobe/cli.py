@@ -36,11 +36,8 @@ def main():
             print(f"{'PASS' if r['passed'] else 'FAIL'} - {r['name']}")
         return
 
-    if not args.no_exit_on_fail:
-        if not all(r["passed"] for r in results):
-            sys.exit(1)
-    else:
-        sys.exit(1)  
+    if not args.no_exit_on_fail and not all(r["passed"] for r in results):
+        sys.exit(1)
 
 
 if __name__ == "__main__":
