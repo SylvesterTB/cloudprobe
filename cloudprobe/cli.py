@@ -1,6 +1,5 @@
 import argparse
 from .runner import run_tests
-# from .utils import setup_logging
 from .utils import write_results
 import json
 import sys
@@ -32,8 +31,9 @@ def main():
             print(f"{'PASS' if r['passed'] else 'FAIL'} - {r['name']}")
         return
 
-    if all(r['passed'] for r in results):
-        sys.exit(0) 
+    if not args.no_exit_on_fail:
+        if not all(r["passed"] for r in results):
+            sys.exit(1)
     else:
         sys.exit(1)  
 
