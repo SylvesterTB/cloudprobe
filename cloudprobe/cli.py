@@ -13,9 +13,14 @@ def main():
     parser.add_argument("--json", action="store_true", help="Output results as JSON")
     parser.add_argument("--summary", action="store_true", help="Show only PASS/FAIL summary")
     parser.add_argument("--fail-fast", action="store_true", help="Stop on first failure")
+    parser.add_argument(
+            "--no-exit-on-fail",
+            action="store_true",
+            help="Do not exit with code 1 if any test fails"
+        )
 
     args = parser.parse_args()
-    # setup_logging()
+
     results = run_tests(args.config)
     write_results(results)
 
