@@ -16,7 +16,7 @@ def main():
     parser.add_argument("--fail-fast", action="store_true", help="Stop on first failure")
 
     args = parser.parse_args()
-    setup_logging()
+    # setup_logging()
     results = run_tests(args.config)
     write_results(results)
 
