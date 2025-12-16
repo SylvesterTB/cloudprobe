@@ -1,6 +1,6 @@
 import argparse
 from .runner import run_tests
-from .utils import setup_logging
+# from .utils import setup_logging
 from .utils import write_results
 import json
 import sys
