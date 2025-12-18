@@ -1,17 +1,32 @@
 [
-    {
-        "name": "Google Homepage",
-        "action": "http",
-        "params": { "url": "https://google.com", "timeout": 5 }
-    },
-    {
-        "name": "Local Webserver Port",
-        "action": "tcp",
-        "params": { "host": "localhost", "port": 8080 }
-    },
-    {
-        "name": "Google Homepage",
-        "action": "dns",
-        "params": { "url": "https://google.com", "timeout": 5 }
-    }
+  {
+    "name": "Google Homepage (HTTP)",
+    "action": "http",
+    "params": { "url": "https://google.com", "timeout": 5 }
+  },
+  {
+    "name": "GitHub Homepage (HTTP)",
+    "action": "http",
+    "params": { "url": "https://github.com", "timeout": 5 }
+  },
+  {
+    "name": "AWS Console DNS",
+    "action": "dns",
+    "params": { "url": "https://console.aws.amazon.com" }
+  },
+  {
+    "name": "Google DNS (TCP 53)",
+    "action": "tcp",
+    "params": { "host": "8.8.8.8", "port": 53, "timeout": 3 }
+  },
+  {
+    "name": "Cloudflare DNS (TCP 53)",
+    "action": "tcp",
+    "params": { "host": "1.1.1.1", "port": 53, "timeout": 3 }
+  },
+  {
+    "name": "Local Webserver Port",
+    "action": "tcp",
+    "params": { "host": "localhost", "port": 8080 }
+  }
 ]
