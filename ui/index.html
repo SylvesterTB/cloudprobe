@@ -7,23 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>CloudProbe Test Dashboard</h1>
+  <div class="container">
+    <h1>CloudProbe Status Dashboard</h1>
+    <p class="subtitle">Automated service health checks</p>
 
-    <div id="results-container">
-        <table id="results-table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Status</th>
-                    <th>Duration (ms)</th>
-                    <th>Error</th>
-                    <th>Details</th>
-                </tr>
-            </thead>
-            <tbody id="results-body"></tbody>
-        </table>
-    </div>
+    <table id="results-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Duration (ms)</th>
+          <th>Error</th>
+        </tr>
+      </thead>
+      <tbody id="results-body"></tbody>
+
+    </table>
+
+    <footer>
+      Last updated automatically via GitHub Actions
+    </footer>
+  </div>
 
     <script src="app.js"></script>
 </body>
+
 </html>
